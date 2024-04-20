@@ -105,9 +105,7 @@ const createNewFunfact = async (req, res) => {
   if (!isInDB) {
     //If the state is NOT in MongoDB, it must be added.
 
-    /* if(req.body.stateCode.toUpperCase() !== req.params.state.toUpperCase()){ //If the state in the url is different than the body, an error is output.
-                return res.json({'message': 'stateCode and url state must match'});
-            } */
+    
 
     const result = await State.create({
       stateCode: req.params.state.toUpperCase(),
