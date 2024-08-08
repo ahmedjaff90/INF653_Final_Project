@@ -1,36 +1,27 @@
 # Ahmed Alzehhawi's INF653_Final_Project
 # Deployed Link: https://ahmed-alzehhawi-.glitch.me
 
-
 Project Overview
-This project focuses on building a Node.js REST API to manage and interact with data related to US states. The API is developed using Express for the server framework and MongoDB for data storage, with Mongoose employed to model the data structure.
+This project involves building a Node.js REST API to manage and interact with data related to US states. The API uses Express for the server framework and MongoDB for data storage, with Mongoose utilized to define the data schema.
 
 Features
-Data Management: The API handles a collection of US states, where each entry includes the state’s abbreviation, name, and additional fun facts. The data is stored in a MongoDB collection, structured using a Mongoose schema (States.js model).
-
-CRUD Operations: The API supports the full range of CRUD (Create, Read, Update, Delete) operations:
-
-GET: Retrieve information on all states or a specific state by its abbreviation.
-POST: Add new states to the collection, along with relevant data.
-PATCH: Update existing state data, such as adding or modifying fun facts.
-DELETE: Remove a state’s data from the collection.
-Data Expansion: The collection was expanded beyond basic state information to include additional details, such as fun facts, making the API more informative and engaging.
+The API is designed to handle a MongoDB collection containing US state data. Each state entry includes its abbreviation, name, and additional fun facts. The API supports a range of CRUD (Create, Read, Update, Delete) operations. For retrieving data, you can use GET requests to fetch all states or data for a specific state by its abbreviation. POST requests allow you to add new states, while PATCH requests enable updating existing state data. DELETE requests are used to remove state data from the collection.
 
 How It Works
-Setting Up: The project is initialized with Node.js, and dependencies are managed using npm. Key dependencies include Express for routing and Mongoose for interacting with MongoDB.
+Setup: The project begins with Node.js, and dependencies are managed using npm. Express is used for routing, and Mongoose is employed for database interactions.
 
-Data Modeling: The States.js model file defines the schema for state data, specifying fields like stateName, stateAbbr, and funFacts. This schema ensures consistency and integrity of the data stored in MongoDB.
+Data Modeling: The States.js model defines the schema for state data, including fields such as stateName, stateAbbr, and funFacts. This schema ensures that data is stored consistently in MongoDB.
 
-API Endpoints:
+API Endpoints: The API has several endpoints:
 
-GET /states: Returns a list of all US states in the collection.
-GET /states/:abbr: Retrieves data for a specific state, identified by its abbreviation.
-POST /states: Adds a new state to the collection. The request body should include all required fields.
-PATCH /states/:abbr: Updates data for a specific state. The request body can include any fields that need to be updated.
-DELETE /states/:abbr: Deletes a state’s data from the collection.
-Deployment: The API is deployed on glitch.com, making it accessible for testing and use. The deployment ensures that the API can handle incoming requests and interact with the MongoDB database seamlessly.
+GET /states: Returns a list of all US states.
+GET /states/:abbr: Retrieves data for a specific state identified by its abbreviation.
+POST /states: Adds a new state to the collection. The request body must include the necessary fields.
+PATCH /states/:abbr: Updates data for a specific state. You can include fields to update in the request body.
+DELETE /states/:abbr: Deletes data for a state from the collection.
+Deployment: The project is deployed on glitch.com, which allows the API to handle requests and interact with the MongoDB database online.
 
-Testing: The API was thoroughly tested to ensure it handles various requests correctly and efficiently. Automated tests were created to validate the endpoints and ensure they function as expected.
+Testing: The API was thoroughly tested to ensure it processes requests correctly. Automated tests were created to validate the functionality of each endpoint.
 
 Usage
-To use the API, you can send HTTP requests to the deployed URL on glitch.com. Each endpoint is designed to respond with the appropriate data or confirmation of the action performed, making it straightforward to integrate into other applications or use as a standalone service.
+To interact with the API, send HTTP requests to the deployed URL on glitch.com. The API is designed to provide the necessary data or confirmation based on the request made.
